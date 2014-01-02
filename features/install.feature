@@ -177,7 +177,7 @@ Feature: cli/install
   Scenario: Install a module with dependencies specified in a Puppetfile
     Given a file named "Puppetfile" with:
     """
-    mod 'with_puppetfile', :git => 'https://github.com/njam/librarian-puppet.git', :path => 'features/examples/with_puppetfile', :ref => 'issue-159'
+    mod 'with_puppetfile', :git => 'https://github.com/rodjek/librarian-puppet.git', :path => 'features/examples/with_puppetfile'
     """
     When I run `librarian-puppet install`
     Then the exit status should be 0
