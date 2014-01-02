@@ -181,8 +181,8 @@ Feature: cli/install
     """
     When I run `librarian-puppet install`
     Then the exit status should be 0
-    And the file "modules/apt/with_puppetfile" should match /name *'with-puppetfile'/
-    And the file "modules/apt/test" should match /name *'test'/
+    And the file "modules/with_puppetfile/Modulefile" should match /name *'with-puppetfile'/
+    And the file "modules/test/Modulefile" should match /name *'test'/
 
   Scenario: Install a module with conflicts
     Given a file named "Puppetfile" with:
